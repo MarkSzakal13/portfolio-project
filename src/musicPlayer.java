@@ -2,27 +2,36 @@ import components.queue.Queue;
 import components.queue.Queue1L;
 
 /** */
-public class proofOfConcept {
+public class musicPlayer {
     /** */
 
     private Queue<String> playlist;
 
     /** */
-    public proofOfConcept() {
+    public musicPlayer() {
         this.playlist = new Queue1L<>();
     }
 
     /** */
     public void queue(String song) {
-        this.playlist.add(song);
+        this.playlist.enqueue(song);
     }
 
-    public void dequeue(String song) {
-        this.playlist.remove(song);
+    public void remove(String song) {
+        Queue<String> temp = new Queue1L<>();
+
+        while (this.playlist.length() > 0) {
+            String currentSong = this.playlist.dequeue();
+
+            if (!currentSong.equals(song)) {
+                temp.enqueue(currentSong);
+            }
+            this.playlist = temp;
+        }
     }
 
     /** */
     public static void main(String[] args) {
-        ArrayList<String> song = new ArrayList<>();
+        String song = null;
     }
 }
