@@ -67,6 +67,21 @@ the following form: YYYY.0M.0D.
 - Created initial drafts of the six portfolio assessments
 - Added READMEs to key folders like `test` and `lib` to explain their purpose
 
+## [2024.09.15]
+
+### Added
+
+- Designed a `bank account` component
+- Designed a `music player` component
+- Designed a `shopping cart` component
+
+## [2024.10.02]
+
+### Added
+
+- Added `musicPlayer.java` to `\src`
+- Added kernel methods including: `queue`, `remove`, `play`, `pause`, and `getTrack`
+
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
