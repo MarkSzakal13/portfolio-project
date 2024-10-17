@@ -81,7 +81,6 @@ the following form: YYYY.0M.0D.
 
 - Added `musicPlayer.java` to `\src`
 - Added kernel methods including: `queue`, `remove`, `play`, `pause`, and `getTrack`
-
 ## [2024.10.17]
 
 ### Added
