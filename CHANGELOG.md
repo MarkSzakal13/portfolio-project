@@ -81,6 +81,22 @@ the following form: YYYY.0M.0D.
 
 - Added `musicPlayer.java` to `\src`
 - Added kernel methods including: `queue`, `remove`, `play`, `pause`, and `getTrack`
+## [2024.10.17]
+
+### Added
+
+- Added `MusicPlayerKernel.java` to `\src`
+- Added javadoc comments for `addSong` and `removeSong`
+- Added `MusicPlayerInterface.java` to `\src`
+- Added javadoc comments for `play`, `pause`, and `getTrack`
+
+### Changed
+
+- Names of `queue` and `remove` methods to `addSong` and `removeSong` for clarity
+
+### Fixed
+
+- Problems with code not uploading to github
 
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
