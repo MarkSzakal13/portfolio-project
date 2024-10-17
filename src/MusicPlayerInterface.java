@@ -12,7 +12,6 @@ public interface MusicPlayerInterface extends MusicPlayerKernel {
      * @requires playlist.length() > 0
      * @ensures play = (playlist.length() > 0) && currentTrack != null
      */
-    @Override
     boolean play();
 
     /**
@@ -23,7 +22,6 @@ public interface MusicPlayerInterface extends MusicPlayerKernel {
      * @updates this
      * @ensures pause = !#isPlaying
      */
-    @Override
     boolean pause();
 
     /**
@@ -33,6 +31,5 @@ public interface MusicPlayerInterface extends MusicPlayerKernel {
      * @requires playlist.length() > 0
      * @ensures getTrack = currentTrack
      */
-    @Override
     String getTrack();
 }
