@@ -3,31 +3,29 @@
  */
 public interface MusicPlayerInterface extends MusicPlayerKernel {
     /**
-     * Plays the current track. If the music is already playing, it continues to
-     * play. If no track is currently playing, it sets the first track in the
-     * playlist as the current track and starts playing.
+     * Plays the current track.
      *
-     * @return true if the song is playing, false otherwise.
+     * @return whether or not the song is playing
      * @updates this
      * @requires playlist.length() > 0
-     * @ensures play = (playlist.length() > 0) && currentTrack != null
+     * @ensures currentTrack != null
      */
     boolean play();
 
     /**
-     * Pauses the current track if it is playing. If no track is currently
-     * playing, this method does nothing.
+     * Pauses the current track.
      *
-     * @return true if the song was successfully paused, false otherwise.
+     * @return whether or not the song is paused
      * @updates this
-     * @ensures pause = !#isPlaying
+     * @requires playlist.length() > 0
+     * @ensures currentTrack != null
      */
     boolean pause();
 
     /**
-     * Returns the name of the current track.
+     * Returns the current track.
      *
-     * @return The name of the current track, or null if no track is playing.
+     * @return the current track
      * @requires playlist.length() > 0
      * @ensures getTrack = currentTrack
      */
