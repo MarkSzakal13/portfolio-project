@@ -3,7 +3,7 @@ import components.standard.Standard;
 /**
  * Kernel interface for a music player.
  */
-public interface MusicPlayerKernel extends Standard<musicPlayer> {
+public interface MusicPlayerKernel extends Standard<MusicPlayer> {
 
     /**
      * Adds a song to the playlist.

@@ -1,13 +1,13 @@
 import components.queue.Queue;
 import components.queue.Queue1L;
 
-public class musicPlayer {
+public class MusicPlayer {
 
     private Queue<String> playlist;
     private String currentTrack;
     private boolean isPlaying;
 
-    public musicPlayer() {
+    public MusicPlayer() {
         this.playlist = new Queue1L<>();
         this.currentTrack = null;
         this.isPlaying = false;
@@ -51,7 +51,7 @@ public class musicPlayer {
 
     /** */
     public static void main(String[] args) {
-        musicPlayer player1 = new musicPlayer();
+        MusicPlayer player1 = new MusicPlayer();
         String song = null;
         player1.addSong("Heartless");
         player1.removeSong("Father Stretch My Hands Pt. 1");
