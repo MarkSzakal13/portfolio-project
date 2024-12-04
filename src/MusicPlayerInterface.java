@@ -32,6 +32,15 @@ public interface MusicPlayerInterface extends MusicPlayerKernel {
     String getTrack();
 
     /**
+     * Returns the current track.
+     *
+     * @return the playlists length
+     * @requires playlist.length() > 0
+     * @ensures getPlaylistLength = number of tracks in the playlist
+     */
+    int getPlaylistLength();
+
+    /**
      * Skips current track.
      *
      * @updates this
