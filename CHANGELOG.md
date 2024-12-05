@@ -107,6 +107,32 @@ the following form: YYYY.0M.0D.
 - Added javadoc comments for `MusicPlayerSecondary.java`
 - Added javadoc comments for `MusicPlayer.java`
 
+## [2024.12.02]
+
+
+### Added
+
+- Designed kernel implementation for `MusicPlayer` component
+
+### Updated
+
+- Naming and javadoc
+
+### Fixed
+- Variable usage in abstract class.
+
+## [2024.12.04]
+
+### Added
+
+- Designed test suite for `MusicPlayer` component
+- Designed two different use cases for `MusicPlayer` component
+
+### Fixed
+
+- Methods that had issues during testing.
+
+
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07

@@ -1,7 +1,34 @@
+package components.musicplayer;
+
+import components.standard.Standard;
+
 /**
- * Music Player Interface.
+ * Kernel interface for a music player.
  */
-public interface MusicPlayerInterface extends MusicPlayerKernel {
+public interface MusicPlayerKernel extends Standard<MusicPlayer> {
+
+    /**
+     * Adds a song to the playlist.
+     *
+     * @param song
+     *            The name of the song being added.
+     * @updates this
+     * @requires song != null
+     * @ensures playlist = #playlist * {song}
+     */
+    void addSong(String song);
+
+    /**
+     * Removes a song from the playlist.
+     *
+     * @param song
+     *            The name of the song being removed.
+     * @updates this
+     * @requires playlist.length() > 0 && song != null
+     * @ensures playlist = #playlist - {song}
+     */
+    void removeSong(String song);
+
     /**
      * Plays the current track.
      *
@@ -39,35 +66,4 @@ public interface MusicPlayerInterface extends MusicPlayerKernel {
      * @ensures getPlaylistLength = number of tracks in the playlist
      */
     int getPlaylistLength();
-
-    /**
-     * Skips current track.
-     *
-     * @updates this
-     * @requires song != null
-     * @ensures playlist = #playlist - {song}
-     */
-    void skip();
-
-    /**
-     * Songs shuffled in random order.
-     *
-     * @updates this
-     * @requires playlist.length > 0
-     * @ensures |playlist| = |#playlist|
-     */
-    void shuffle();
-
-    /**
-     * Song is moved to index in order.
-     *
-     * @param song
-     *            The song being moved.
-     * @param index
-     *            Location to where the song is being moved.
-     * @updates this
-     * @requires playlist.length() > 1 && song != null
-     * @ensures playlist.contains(song) && playlist.indexOf(song) == index
-     */
-    void adjustOrder(String song, int index);
 }

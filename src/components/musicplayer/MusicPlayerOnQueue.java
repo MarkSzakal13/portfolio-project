@@ -1,3 +1,5 @@
+package components.musicplayer;
+
 import components.queue.Queue;
 import components.queue.Queue1L;
 
@@ -5,7 +7,7 @@ import components.queue.Queue1L;
  * Class to represent MusicPlayer kernel methods including addSong, removeSong,
  * play, pause, and getTrack.
  */
-public class MusicPlayer {
+public class MusicPlayerOnQueue extends MusicPlayerSecondary {
 
     /**
      * Initializes empty playlist.
@@ -24,10 +26,45 @@ public class MusicPlayer {
      * Constructs an empty playlist, sets currentTrack to null, and starts
      * isPlaying as paused.
      */
-    public MusicPlayer() {
+    public MusicPlayerOnQueue() {
+        this.createNewRep();
+    }
+
+    /**
+     * Creates new rep of MusicPlayerOnQueue.
+     */
+    private void createNewRep() {
         this.playlist = new Queue1L<>();
         this.currentTrack = null;
         this.isPlaying = false;
+    }
+
+    /**
+     * Creates a new instance of MusicPlayerOnQueue.
+     */
+    @Override
+    public MusicPlayerOnQueue newInstance() {
+        return new MusicPlayerOnQueue();
+    }
+
+    /**
+     * Clears MusicPlayerOnQueue.
+     */
+    @Override
+    public void clear() {
+        this.createNewRep();
+    }
+
+    /**
+     * Transfers MusicPlayerOnQueues instance to the current state.
+     */
+    @Override
+    public void transferFrom(MusicPlayer source) {
+        MusicPlayerOnQueue localSource = (MusicPlayerOnQueue) source;
+        this.playlist = localSource.playlist;
+        this.currentTrack = localSource.currentTrack;
+        this.isPlaying = localSource.isPlaying;
+        localSource.createNewRep();
     }
 
     /**
@@ -36,8 +73,12 @@ public class MusicPlayer {
      * @param song
      *            The song being added.
      */
+    @Override
     public void addSong(String song) {
         this.playlist.enqueue(song);
+        if (this.currentTrack == null) {
+            this.currentTrack = song;
+        }
     }
 
     /**
@@ -46,16 +87,28 @@ public class MusicPlayer {
      * @param song
      *            The song being removed.
      */
+    @Override
     public void removeSong(String song) {
         Queue<String> temp = new Queue1L<>();
+        boolean found = false;
 
         while (this.playlist.length() > 0) {
             String currentSong = this.playlist.dequeue();
 
-            if (!currentSong.equals(song)) {
+            if (!found && currentSong.equals(song)) {
+                found = true;
+            } else {
                 temp.enqueue(currentSong);
             }
-            this.playlist = temp;
+        }
+
+        this.playlist = temp;
+
+        if (this.currentTrack != null && this.currentTrack.equals(song)) {
+            if (this.playlist.length() != 0) {
+                this.currentTrack = null;
+            }
+            this.currentTrack = this.playlist.front();
         }
     }
 
@@ -64,6 +117,7 @@ public class MusicPlayer {
      *
      * @return isPlaying as true if the song starts playing.
      */
+    @Override
     public boolean play() {
         boolean isPlaying = false;
         if (this.playlist.length() > 0) {
@@ -77,6 +131,7 @@ public class MusicPlayer {
      *
      * @return isPlaying as false if the song stops playing.
      */
+    @Override
     public boolean pause() {
         if (this.isPlaying) {
             this.isPlaying = false;
@@ -89,6 +144,7 @@ public class MusicPlayer {
      *
      * @return Returns the current track.
      */
+    @Override
     public String getTrack() {
         return this.currentTrack;
     }
@@ -98,24 +154,8 @@ public class MusicPlayer {
      *
      * @return Returns the playlist length.
      */
+    @Override
     public int getPlaylistLength() {
         return this.playlist.length();
-    }
-
-    /**
-     * Main methods for MusicPlayer.
-     *
-     * @param args
-     *            command-line arguments (not used)
-     */
-    public static void main(String[] args) {
-        MusicPlayer player1 = new MusicPlayer();
-        player1.addSong("Heartless");
-        player1.removeSong("Father Stretch My Hands Pt. 1");
-        player1.getTrack();
-        player1.play();
-        player1.pause();
-        player1.removeSong("Heartless");
-        player1.play();
     }
 }
