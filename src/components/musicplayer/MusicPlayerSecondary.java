@@ -1,3 +1,5 @@
+package components.musicplayer;
+
 import components.queue.Queue;
 import components.queue.Queue1L;
 
@@ -5,7 +7,7 @@ import components.queue.Queue1L;
  * Abstract class to implement MusicPlayer. Includes methods such as skip,
  * shuffle, adjustOrder, equals, and toString.
  */
-public abstract class MusicPlayerSecondary implements MusicPlayerInterface {
+public abstract class MusicPlayerSecondary implements MusicPlayer {
 
     /**
      * Skips current song and set the next song as current.
@@ -62,6 +64,7 @@ public abstract class MusicPlayerSecondary implements MusicPlayerInterface {
             while (this.getPlaylistLength() > 0) {
                 String currentSong = this.getTrack();
                 this.removeSong(currentSong);
+
                 if (!found && currentSong.equals(song)) {
                     found = true;
                 } else {
@@ -70,7 +73,7 @@ public abstract class MusicPlayerSecondary implements MusicPlayerInterface {
             }
 
             int currentIndex = 0;
-            while (temp.length() > 0) {
+            while (temp.length() > 0 || currentIndex == index) {
                 if (currentIndex == index) {
                     this.addSong(song);
                 }
