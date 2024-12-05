@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Mark Szakal
+- **Dot Number**: szakal.2
+- **Due Date**: 12/04/2024 @ 11:59
 
 ## Assignment Overview
 
@@ -50,7 +50,6 @@ course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -132,7 +131,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -298,18 +296,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+`I feel like I have a much better understanding of software development from the portfolio project. I had attempted to do some projects on my own but always either just followed a tutorial directly or got lost along the way. While the component I designed is pretty basic I feel as though I made good progress towards understanding and designing many of my own personal projects. Overall, I think this project is good for laying a strong foundation for students to build off as they work to make their own projects moving forward.`
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+`Most definitely, I realized that I lacked the understanding of what an abstract class was and how to actually implement them. I thought the ability to resubmit was very helpful as I was able to reflect back on my previous work and gain a better understanding as to where I got confused.`
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+`I would say that this project has made me confident that I went into the right field. My opinion of software development can vary day to day but overall I always at least partially believed that it was the right field for me. Through the portfolio project I was able to see both the highs and lows for software development and while the lows can be frusterating I do still believe the highs are worth it.`
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -317,29 +315,28 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+`I picked up the ability to work from scratch and design my own component. As I mentioned earlier I often struggled to find a direction so I think this project was good for a base level understanding of developing software. It was the perfect balance where I was able to take some of the material I learned in class and build on it by implementing my own ideas.`
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+`I would likely say somethig along the lines of "designed and implemented my oown component from scratch, showing problem solving and software design skills."`
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+`I'm definitely more interested in the idea of creating a music player with some more advanced functions. Spotify wrapped coming out earlier today was actually perfectly timed as it inspired some new potenital features that could be fun to add. I plan on looking into developing it further as well as reworking some of my old projects that I never finished.`
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+`I think working on side projects are valuable for getting hired and as I mentioned prior, I think this is a good stepping stone to improve my quality of projects. Additionally, I have been working to get in contact with some people in the field for potential interships and of course I will always look to lean on you as a resource as well/ `
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -375,7 +372,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -427,7 +423,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
