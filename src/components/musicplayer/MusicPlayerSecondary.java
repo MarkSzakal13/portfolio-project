@@ -73,7 +73,7 @@ public abstract class MusicPlayerSecondary implements MusicPlayer {
             }
 
             int currentIndex = 0;
-            while (temp.length() > 0 || currentIndex == index) {
+            while (temp.length() > 0) {
                 if (currentIndex == index) {
                     this.addSong(song);
                 }
